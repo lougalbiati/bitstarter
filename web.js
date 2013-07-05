@@ -5,6 +5,9 @@ var app = express.createServer(express.logger());
 
 
 // app.get('/', function(request, response) {
+//   response.send('Hello World 4!');
+// });
+// app.get('/', function(request, response) {
 //   var nchar = fs.readFileSync("index.html", function (err, data) {
 //     // if (err) throw err;
 //     // console.log(data);
@@ -14,7 +17,9 @@ var app = express.createServer(express.logger());
 //   });
 // });
 app.get('/', function(request, response) {
-  response.send('Hello World 4!');
+  var buf = fs.readFileSync("index.html");
+  var str = buf.toString('utf8');
+  response.send(str);
 });
 
 var port = process.env.PORT || 5000;
