@@ -10,7 +10,7 @@ app.get('/', function(request, response) {
     // console.log(data);
     // response.send('Hello World 3!');
     // response.send(data);
-    response.send(data.toString());
+    response.send(data.toString('utf8'));
   });
 });
 
