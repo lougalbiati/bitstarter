@@ -8,8 +8,8 @@ app.get('/', function(request, response) {
   var nchar = fs.readFileSync("index.html", function (err, data) {
     if (err) throw err;
     // console.log(data);
-    // response.send('Hello World 3!');
-    response.send(data);
+    response.send('Hello World 4!');
+    //response.send(data);
     //response.send(data.toString('utf8'));
   });
 });
