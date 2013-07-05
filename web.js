@@ -9,8 +9,8 @@ app.get('/', function(request, response) {
     if (err) throw err;
     // console.log(data);
     // response.send('Hello World 3!');
-    // response.send(data);
-    response.send(data.toString('utf8'));
+    response.send(data);
+    //response.send(data.toString('utf8'));
   });
 });
 
